@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap');
+
+body {
+  background-image:url(1.jpg);
+  font-family:'Roboto Condensed', sans-serif;color:rgb(233, 238, 245);
+  font-weight:300;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 110px;
+  margin-right: 110px;
+  border: 3px double black;
+}
+
+body h1 {
+  font-family:'Roboto Condensed', sans-serif;
+  font-weight:300;
+  margin: 15px 20px;
+  text-align:center;
+}
+
+
+h2 {
+  font-family:'Roboto Condensed',sans-serif;
+  text-align:center;
+}
+
+
+h3 {
+  color: rgb(0, 0, 0);
+}
+
+
+p {
+  color: rgb(0, 0, 0);
+  letter-spacing: .5px;
+  word-spacing:2px;
+  text-indent: 20px;
+}
+
+mark { background-color: white }
+
+#Pre_operative {
+  width:auto;
+  margin:auto;
+  margin-top: auto;
+  text-align:center;
+  position: relative;
+}
+
+article {
+  vertical-align: top;
+  max-width: 300px;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 10px;
+  margin: auto;
+  height: auto;;
+  background: rgb(168, 182, 287);
+}
+
+aside {
+  vertical-align: top;
+  width: 900px;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 10px;
+  margin: auto;
+  height: auto;;
+  background: rgb(168, 182, 287);
+}
+
+.main-info {  
+  height: 240px;  
+  opacity: 0.85;
+  width: 90%;
+}
+
+.main-def {  
+  max-height: 150px;  
+  opacity: 0.85;
+  width: 90%;
+}
+
+#burg a{
+  display:block;
+  width: 50px;
+}
+
+#burg{
+  width: 95%;
+  background: #a8b6e3;
+  padding: 8.5px 0 7.5px 5%;
+}
+
+span{
+display: flex;
+margin: 8px;
+width: 30px;
+height: 1px;
+color: rgb(252, 246, 210);
+z-index: 999;
+}
+
+.bar{
+  display: flex;
+  width: 100%;
+  background: #212121;
+  opacity: 0.95;
+  
+}
+
+.bar a{
+  font-size: 1.0em;
+  color: rgb(233, 238, 245);
+  text-decoration: none;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+
+.bar li{
+  list-style-type: none;
+  margin: 5% 5%;
+
+}
+
+.bar ul{
+padding: 5% 0%;
+}
