@@ -1,0 +1,203 @@
+<html>
+  <head>
+      <title>КОТангенс - решаем геометрию вместе! </title>
+      <link rel="stylesheet" href="css/style.css" />
+      
+  </head>
+
+  <body>
+    <header id="main-header">
+      <h1>КОТангенс - решаем геометрию вместе!</h1>
+	  <h2>"Вдохновение нужно в геометрии не меньше, чем в поэзии" А. C. Пушкин </h2>
+    </header>
+
+    
+      <div class ="dropdown">
+  <button onclick = "myFunc()" class="dropbtn"><h2>Меню</h2></button>    
+    <nav id="myDropdown" class="dropdown-content">
+      <ul>
+	<li><a href="main.html">Главная</a></li>
+        <li><a href="def.html">Основные понятия</a></li>
+        <li><a href="axiom.html">Аксиомы геометрии</a></li>
+        <li><a href="tria.html">Треугольники</a></li>
+        <li><a href="ngeo.html">Неевклидовы геометрии</a>
+	<li><a href="form.html">Оставить заявку для записи на занятия</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <section id="Pre_operative">
+        <h2>Треугольник</h2>
+
+<aside class="main-def">
+      <p>
+	Треугольник - геометрическая фигура, состоящая из трёх точек плоскости, не лежащих на одной прямой, и трёх отрезков, попарно соединяющих эти точки. Имеет три угла, три вершины и три стороны.
+
+      </p>
+    </aside>
+
+<h2>Общие свойства</h2>
+
+<aside class="main-def">
+      <p>
+	Сумма углов треугольника равна 180 градусов.
+      </p>
+ </aside>
+      
+<aside class="main-def">
+      <p>
+	Сумма двух любых сторон больше третьей.
+      </p>
+ </aside>
+
+
+<aside class="main-def">
+      <p>
+	Против больше стороны лежит больший угол.
+      </p>
+ </aside>
+
+<h2>Классификации</h2>
+<h2>По углу</h2>    
+	
+	<article class="main-info">
+        <h3>Остроугольный</h3>
+	<p>
+          Все три угла - острые.     
+        </p>
+	<svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 50, 35 15, 85 50"/>
+
+</svg>
+      </article>
+
+	<article class="main-info">
+        <h3>Тупоугольный</h3>
+	<p>
+          Два угла - острые, один - тупой.     
+        </p>
+	<svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 5, 40 50, 85 50"/>
+      </article>
+	
+	<article class="main-info">
+        <h3>Прямоугольный</h3>
+	<p>
+          Два угла - острые, один - прямой. Сторона, лежащая против прямого угла, называется гипотенузой, две другие — катетами.
+	<br /> <br />
+	<button onclick="showPopup2()">Теорема Пифагора</button>
+	<div id="popup-overlay2">
+  	<div id="popup2">
+    	<h2>Теорема Пифагора</h2>
+    	<h2>В прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов.</h2>
+    	<br /> <br />
+	<button onclick="hidePopup2()">Свернуть</button>
+ 	</div>
+ 	</div>   
+        </p>
+	<svg viewBox="0 0 100 37" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 0, 10 35, 85 35"/>
+      </article> 
+    
+
+<h2>По равенству сторон</h2>    
+	
+	<article class="main-info">
+        <h3>Разносторонний</h3>
+	<p>
+          Длины все трёх сторон различны.     
+        </p>
+	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 15, 45 65, 90 55"/>
+
+</svg>
+      </article>
+
+	<article class="main-info">
+        <h3>Равнобедренный</h3>
+	<p>
+          Два стороны равны. Их называют боковыми, третью - основанием.  
+	<br /> <br />
+	<button onclick="showPopup()">Свойства</button>
+	<div id="popup-overlay">
+  	<div id="popup">
+    	<h2>Свойства равнобедренных треугольников</h2>
+    	<h2>1. В равнобедренном треугольнике углы при основании равны.</h2>
+	<h2>2. Биссектрисса, проведённая к основанию, является медианой и высотой.</h2>
+    	<br /> <br />
+	<button onclick="hidePopup()">Свернуть</button>
+ 	</div>
+ 	</div>
+   
+        </p>
+	<svg viewBox="0 0 90 72" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 30, 50 5, 90 30"/>
+      </article>
+	
+	<article class="main-info">
+        <h3>Равносторонний</h3>
+	<p>
+          Все три стороны равны.  
+
+	<br /> <br />
+	<button onclick="showPopup1()">Свойства</button>
+	<div id="popup-overlay1">
+  	<div id="popup1">
+    	<h2>Свойства равносторонних треугольников</h2>
+    	<h2>1. В равностороннем треугольнике все углы равны 60 градусов.</h2>
+	<h2>2. Биссектрисса является медианой и высотой.</h2>
+    	<br /> <br />
+	<button onclick="hidePopup1()">Свернуть</button>
+ 	</div>
+ 	</div>   
+        </p>
+	<svg viewBox="0 0 100 86" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="10 49.5, 45 0, 80 49.5"/>
+      </article> 
+
+  
+<h2>Признаки равенства треугольников</h2>    
+	
+	<article class="main-info">
+        <h3>Первый признак равенства</h3>
+	<p>
+          Если две стороны и угол между ними одного треугольника соответственно равны двум сторонам и углу между ними другого треугольника, такие треугольники равны.   
+        </p>
+
+      </article>
+
+	<article class="main-info">
+        <h3>Второй признак равенства</h3>
+	<p>
+          Если два угла и прилежащая к ним сторона одного треугольника соответственно равны двум углам и прилежащей к ней стороне другого треугольника, такие треугольники равны     
+        </p>
+      </article>
+	
+	<article class="main-info">
+        <h3>Третий признак равенства</h3>
+	<p>
+          Если три стороны одного треугольника соответственно равны трём сторонам другого треугольника, такие треугольники равны.     
+        </p>
+      </article> 
+
+  </section>
+  <br /> <br />
+      
+     <section>
+      "КОТангенс" - поможем разобраться в геометрии!
+    </section>
+
+    <section>
+      Контакты: kakoitoadress@mail.ru
+    </section>
+
+      </main>
+
+    <footer>&copy; Copyright "КОТангенс" 2025</footer>
+    <script charset = "UTF-8"  src="./js/menu.js" type = "text/javascript"></script>
+    <script charset = "UTF-8"  src="./js/win.js" type = "text/javascript"></script>
+    
+    
+  </body>
+
+</html>
