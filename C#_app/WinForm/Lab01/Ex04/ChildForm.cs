@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MdiApplication
+namespace Ex04
 {
     public partial class ChildForm : Form
     {
