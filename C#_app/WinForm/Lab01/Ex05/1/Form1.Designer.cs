@@ -1,4 +1,4 @@
-﻿namespace ITMO.AppCS.Lab01.Task5
+﻿namespace Ex0501
 {
     partial class Form1
     {
