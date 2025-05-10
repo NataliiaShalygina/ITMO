@@ -106,7 +106,7 @@ private void InitializeComponent()
             // 
             // KeyDate
             // 
-            this.KeyDate.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeyDate.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyDate.ForeColor = System.Drawing.Color.Blue;
             this.KeyDate.Location = new System.Drawing.Point(240, 194);
             this.KeyDate.Name = "KeyDate";
@@ -119,7 +119,7 @@ private void InitializeComponent()
             // 
             // KeyOne
             // 
-            this.KeyOne.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold);
+            this.KeyOne.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyOne.ForeColor = System.Drawing.Color.Blue;
             this.KeyOne.Location = new System.Drawing.Point(10, 249);
             this.KeyOne.Name = "KeyOne";
@@ -145,7 +145,7 @@ private void InitializeComponent()
             // 
             // KeySix
             // 
-            this.KeySix.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeySix.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeySix.ForeColor = System.Drawing.Color.Blue;
             this.KeySix.Location = new System.Drawing.Point(125, 194);
             this.KeySix.Name = "KeySix";
@@ -157,7 +157,7 @@ private void InitializeComponent()
             // 
             // KeyFive
             // 
-            this.KeyFive.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeyFive.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyFive.ForeColor = System.Drawing.Color.Blue;
             this.KeyFive.Location = new System.Drawing.Point(67, 194);
             this.KeyFive.Name = "KeyFive";
@@ -169,7 +169,7 @@ private void InitializeComponent()
             // 
             // KeyEqual
             // 
-            this.KeyEqual.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeyEqual.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyEqual.ForeColor = System.Drawing.Color.Red;
             this.KeyEqual.Location = new System.Drawing.Point(240, 305);
             this.KeyEqual.Name = "KeyEqual";
@@ -182,7 +182,7 @@ private void InitializeComponent()
             // 
             // KeyTwo
             // 
-            this.KeyTwo.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeyTwo.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyTwo.ForeColor = System.Drawing.Color.Blue;
             this.KeyTwo.Location = new System.Drawing.Point(67, 249);
             this.KeyTwo.Name = "KeyTwo";
@@ -194,7 +194,7 @@ private void InitializeComponent()
             // 
             // KeyZero
             // 
-            this.KeyZero.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold);
+            this.KeyZero.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
             this.KeyZero.ForeColor = System.Drawing.Color.Blue;
             this.KeyZero.Location = new System.Drawing.Point(10, 305);
             this.KeyZero.Name = "KeyZero";
@@ -357,7 +357,7 @@ private void InitializeComponent()
             // KeyClear
             // 
             this.KeyClear.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
-            this.KeyClear.ForeColor = System.Drawing.Color.Red;
+            this.KeyClear.ForeColor = System.Drawing.Color.Green;
             this.KeyClear.Location = new System.Drawing.Point(240, 138);
             this.KeyClear.Name = "KeyClear";
             this.KeyClear.Size = new System.Drawing.Size(67, 47);
@@ -370,7 +370,7 @@ private void InitializeComponent()
             // KeyDivide
             // 
             this.KeyDivide.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold);
-            this.KeyDivide.ForeColor = System.Drawing.Color.Red;
+            this.KeyDivide.ForeColor = System.Drawing.Color.Green;
             this.KeyDivide.Location = new System.Drawing.Point(182, 138);
             this.KeyDivide.Name = "KeyDivide";
             this.KeyDivide.Size = new System.Drawing.Size(48, 47);
@@ -401,9 +401,9 @@ private void InitializeComponent()
             // 
             // EngCalcToolStripMenuItem
             // 
-            this.EngCalcToolStripMenuItem.Name = "èíæåíåðíûéÊàëüêóëÿòîðToolStripMenuItem";
+            this.EngCalcToolStripMenuItem.Name = "EngCalcToolStripMenuItem";
             this.EngCalcToolStripMenuItem.Size = new System.Drawing.Size(275, 26);
-            this.EngCalcToolStripMenuItem.Text = "Èíæåíåðíûé êàëüêóëÿòîð";
+            this.EngCalcToolStripMenuItem.Text = "Инженерный калькулятор";
             // 
             // CalcUI
             // 
@@ -582,7 +582,7 @@ private void InitializeComponent()
         {
             
             Menu.DropDownItems.Clear();
-            ToolStripMenuItem calc = new ToolStripMenuItem("Èíæåíåðíûé êàëüêóëÿòîð");
+            ToolStripMenuItem calc = new ToolStripMenuItem("Инженерный калькулятор");
             calc.Click += engeneerCalc_Click;
             Menu.DropDownItems.Add(calc);
         }
