@@ -1,6 +1,6 @@
 using System.Xml;
 
-namespace Ex02TestList
+namespace TestList
 {
     public partial class TestList : Form
     {
