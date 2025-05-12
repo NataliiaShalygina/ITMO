@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ITMO.WinForm.Lab1.Exercise3
+namespace Ex03
 {
     internal static class Program
     {
