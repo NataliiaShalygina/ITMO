@@ -14,22 +14,26 @@ namespace Exam
 
       public string Algebra { get; set; }
       public string Geometry { get; set; }
-      public string MatchAnalysis { get; set; }
+      public string MathAnalysis { get; set; }
       public string ProbTheory { get; set; }
       public string Phisics { get; set; }
 
-      public int SumSub { get; set; }
-      public StudentRecord(string firstName, string lastName, string group, string algebra, string geometry, string mathAnalysis, string probTheory, string phisics)
+      public int SumBall { get; set; }
+      public double SrBall { get; set; }
+      
+        public StudentRecord(string firstName, string lastName, string group, string algebra, string geometry, string mathAnalysis, string probTheory, string phisics)
             {
                FirstName = firstName;
                LastName = lastName;
                Group = group;
                Algebra = algebra;
                Geometry = geometry;
-               MatchAnalysis = mathAnalysis;
+               MathAnalysis = mathAnalysis;
                ProbTheory = probTheory;
                Phisics = phisics;
-               SumSub = Convert.ToInt32(algebra) + Convert.ToInt32(geometry) + Convert.ToInt32(mathAnalysis) + Convert.ToInt32(probTheory) + Convert.ToInt32(phisics);
+               int[] MasBall = { Convert.ToInt32(algebra), Convert.ToInt32(geometry), Convert.ToInt32(mathAnalysis), Convert.ToInt32(probTheory), Convert.ToInt32(phisics) };
+               SumBall = MasBall.Sum();
+               SrBall = MasBall.Average();         
             }
         }
     }
