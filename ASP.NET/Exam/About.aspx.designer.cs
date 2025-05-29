@@ -9,8 +9,6 @@
 
 namespace Exam
 {
-
-
     public partial class About
     {
     }
