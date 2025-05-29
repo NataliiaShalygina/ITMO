@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Summary.aspx.cs" Inherits="Exam.Summary" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Summary.aspx.cs" Inherits="Exam.Summary" MasterPageFile="~/Site.master"%>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <div>
@@ -21,7 +21,7 @@
                     { 
                         
                         string htmlString = 
-                            String.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td>", 
+                            String.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td>td>{4}</td>", 
                             record.FirstName, record.LastName, record.Group, record.SumBall, record.SrBall);
                         Response.Write(htmlString); 
                     } 
