@@ -12,7 +12,6 @@ class Window:
         self.bg = bg
         self.master = master
 
-
         if master is None:
             self.root = tk.Tk()
             self.is_root = True
@@ -22,29 +21,31 @@ class Window:
 
         self._setup()
 
-        #Прокрутка 
+        # Блок прокрутки страницы
+
+        # Контейнер для "разделения" на ползунок и канвас
         self.main_container = tk.Frame(self.root, bg=self.bg)
         self.main_container.pack(fill="both", expand=True)
-
+       
+        # Элемент канвас для визуализации прокрутки
         self.canvas = tk.Canvas(self.main_container, bg=self.bg, highlightthickness=0)
         self.canvas.pack(side="left", fill="both", expand=True)
 
+        # Ползунок
         self.scrollbar = tk.Scrollbar(self.main_container, orient="vertical", command=self.canvas.yview)
         self.scrollbar.pack(side="right", fill="y")
-
+  
+        # Связь между холстом и ползунком для динамического изменения положения
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+        # Создание динамического "листа" внутри канвас и его упаковка в канвас
         self.scrollable_frame = tk.Frame(self.canvas, bg=self.bg)
-        self.canvas_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-
+        self.canvas_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw", width=self.width)
+        
+        # Динамика (привязка методов к событию)
         self.scrollable_frame.bind("<Configure>", self._on_frame_configure)
         self.canvas.bind("<Configure>", self._on_canvas_configure)
         self.root.bind_all("<MouseWheel>", self._on_mousewheel)
-
-    #Внешний вид окна 
-    def _setup(self):
-        self.root.title(self.title)
-        self.root.configure(bg=self.bg)      
-        self.root.state("zoomed")
     
     def _on_frame_configure(self, event):
         self.canvas.configure(scrollregion=self.canvas.bbox("all"))
@@ -54,11 +55,18 @@ class Window:
 
     def _on_mousewheel(self, event):
         self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
-        
+
+    # Внешний вид окна 
+    def _setup(self):
+        self.root.title(self.title)
+        self.root.configure(bg=self.bg)
+        self.root.state("zoomed") # Открывает во весь экран
+     
+    # Запуск окна    
     def run(self):
         self.root.mainloop()
 
-# Иконки при запуске приложения (стартовая страница)
+# Иконки при запуске приложения (стартовая страница), которые перекидывают на другие окна
 
 class Icon:
     def __init__(self, master_window, image_path, window_class, text="", place_to_put=None):
@@ -67,14 +75,16 @@ class Icon:
         self.opened_window = None
         self.label_text = text
 
-        self.target_container = place_to_put if place_to_put is not None else self.master_window.root
-
+        # Положение иконок - в контейнере, если он задан, если нет - привязка к родительскому окну
+        self.target_container = place_to_put if place_to_put is not None else self.master_window.scrollable_frame
+  
+        # Положение иконок внутри родителя
         self.icon_block_frame = tk.Frame(self.target_container, bg=self.master_window.bg)
-        self.icon_block_frame.pack(side="left", padx=10, pady=5, expand=True) # padX и padY для отступов между блоками
+        self.icon_block_frame.pack(side="left", padx=30, pady=30, expand=True) 
       
-        # Загрузка иконки
+        # Загрузка иконки (обратывает исключение, когда картинки нет)
         try:
-            img = Image.open(image_path).resize((150, 150))
+            img = Image.open(image_path).resize((200, 200))
             self.photo = ImageTk.PhotoImage(img)
             self.button = tk.Button(
                 self.icon_block_frame,
@@ -95,6 +105,7 @@ class Icon:
             )
             self.label.pack(pady=2)
 
+    # Создаёт окно, проверив, не открыто ли оно уже
     def click(self):
         if self.opened_window is None or not self.opened_window.root.winfo_exists():
             self.opened_window = self.window_class(self.master_window.root)
@@ -125,7 +136,7 @@ class InfoBlock:
           anchor="center",
           wraplength=round(width*0,1)
         )
-        self.text_label.pack(fill="both", padx=15, pady=15)
+        self.text_label.pack(fill="both", padx=15, pady=15, expand=True)
 
     def update_content(self, new_body):
         self.text_label.config(text=new_body)
