@@ -22,12 +22,12 @@ class ArithmeticWindow(Window):
         )
         self.task_display1.pack(padx=20, pady=20, fill="both", expand=False)
         
-        self.find_button1 = CustomButton(
+        self.gen_button1 = CustomButton(
             parent=self.scrollable_frame,
             text="Сгенерировать",
             command=self.randomTablMn
         )
-        self.find_button1.pack(padx=5)
+        self.gen_button1.pack(padx=5)
 
         # Второй блок - контейнер + кнопка, запускающая обновление контента (генерация чисел и отображение дробей)
         tk.Label(self.scrollable_frame, text="Вычислить:", font=("Courier New", 14), bg=self.bg).pack(pady=5)
@@ -38,12 +38,12 @@ class ArithmeticWindow(Window):
         )
         self.task_display2.pack(padx=20, pady=20, fill="both", expand=False)
 
-        self.find_button2 = CustomButton(
+        self.gen_button2 = CustomButton(
             parent=self.scrollable_frame,
             text="Сгенерировать",
             command=self.randomObDrob
         )
-        self.find_button2.pack(padx=5)
+        self.gen_button2.pack(padx=5)
 
         # Третий блок - контейнер + кнопка, запускающая обновление контента (генерация примера)
         self.task_display3 = InfoBlock(
@@ -53,12 +53,12 @@ class ArithmeticWindow(Window):
         )
         self.task_display3.pack(padx=20, pady=20, fill="both", expand=False)
 
-        self.find_button3 = CustomButton(
+        self.gen_button3 = CustomButton(
             parent=self.scrollable_frame,
             text="Сгенерировать",
             command=self.randomPrimer
         )
-        self.find_button3.pack(padx=5)
+        self.gen_button3.pack(padx=5)
 
     # Методы для генерации значений и передачи их блоку
 
