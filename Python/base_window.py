@@ -20,8 +20,6 @@ class Window:
             self.root = tk.Toplevel(master)
             self.is_root = False
 
-        self._is_fullscreen = False
-        self._prev_geometry = None
         self._setup()
 
         #Прокрутка 
@@ -45,14 +43,7 @@ class Window:
     #Внешний вид окна 
     def _setup(self):
         self.root.title(self.title)
-        self.root.configure(bg=self.bg)
-
-        screen_w = self.root.winfo_screenwidth()
-        screen_h = self.root.winfo_screenheight()
-        
-        x = (screen_w - self.width) // 2
-        y = ((screen_h - self.height) // 2)
-      
+        self.root.configure(bg=self.bg)      
         self.root.state("zoomed")
     
     def _on_frame_configure(self, event):
